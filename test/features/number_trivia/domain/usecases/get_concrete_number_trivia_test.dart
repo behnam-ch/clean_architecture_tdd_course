@@ -7,7 +7,7 @@ import 'package:clean_architecture_tdd_course/features/number_trivia/domain/enti
 import 'package:clean_architecture_tdd_course/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 import 'package:clean_architecture_tdd_course/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
 
-@GenerateNiceMocks([MockSpec<NumberTriviaRepository>()])
+// @GenerateNiceMocks([MockSpec<NumberTriviaRepository>()])
 import 'mock_number_trivia_repository.mocks.dart';
 
 void main() {
