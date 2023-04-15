@@ -8,15 +8,15 @@ import 'package:clean_architecture_tdd_course/core/error/failures.dart';
 import 'package:clean_architecture_tdd_course/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:clean_architecture_tdd_course/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:clean_architecture_tdd_course/features/number_trivia/data/repositories/number_trivia_repository_impl.dart';
-import 'package:clean_architecture_tdd_course/core/platform/network_info.dart';
+import 'package:clean_architecture_tdd_course/core/network/network_info.dart';
 import 'package:clean_architecture_tdd_course/features/number_trivia/data/datasources/number_trivia_local_data_source.dart';
 import 'package:clean_architecture_tdd_course/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
 
 import 'number_trivia_respository_impl_test.mocks.dart';
 
-// @GenerateNiceMocks([MockSpec<NumberTriviaRemoteDataSource>()])
-// @GenerateNiceMocks([MockSpec<NumberTriviaLocalDataSource>()])
-// @GenerateNiceMocks([MockSpec<NetworkInfo>()])
+@GenerateNiceMocks([MockSpec<NumberTriviaRemoteDataSource>()])
+@GenerateNiceMocks([MockSpec<NumberTriviaLocalDataSource>()])
+@GenerateNiceMocks([MockSpec<NetworkInfo>()])
 void main() {
   late NumberTriviaRepositoryImpl repository;
   late MockNumberTriviaRemoteDataSource mockRemoteDataSource;
