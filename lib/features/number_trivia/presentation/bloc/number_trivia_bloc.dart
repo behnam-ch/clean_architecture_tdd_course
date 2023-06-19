@@ -34,9 +34,9 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
         final inputEither =
             inputConverter.stringToUnsignedInteger(event.numberString);
 
-        inputEither.fold(
+        await inputEither.fold(
           (failure) {
-            emit(Error(message: INVALID_INPUT_FAILURE_MESSAGE));
+            emit(const Error(message: INVALID_INPUT_FAILURE_MESSAGE));
           },
           (integer) async {
             emit(Loading());
