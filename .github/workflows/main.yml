@@ -8,9 +8,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2.10.0
+      - uses: subosito/flutter-action@v2
         with:
-          flutter-version: 2.1.0
+          flutter-version: '2.1.0'
           channel: 'stable'
 
       - name: Install Dependencies
