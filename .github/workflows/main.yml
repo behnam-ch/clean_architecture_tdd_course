@@ -9,13 +9,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
+        id: flutter-action
         with:
           flutter-version: '2.1.0'
           channel: 'stable'
           architecture: x64
       - run: |
-          git config --global --add safe.directory /opt/hostedtoolcache/flutter/stable-2.1.0-x64
-          flutter build bundle
+          git config --global --add safe.directory /opt/hostedtoolcache/flutter/${{ steps.flutter-action.outputs.CHANNEL }}-${{ steps.flutter-action.outputs.VERSION }}-${{ steps.flutter-action.outputs.ARCHITECTURE }}
+          flutter --version
 
       - name: Install Dependencies
         run: flutter packages get
