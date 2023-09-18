@@ -12,6 +12,7 @@ jobs:
         with:
           flutter-version: '2.1.0'
           channel: 'stable'
+          architecture: x64
       - run: |
           git config --global --add safe.directory /opt/hostedtoolcache/flutter/stable-2.1.0-x64
           flutter build bundle
