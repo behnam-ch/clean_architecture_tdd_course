@@ -32,6 +32,6 @@ jobs:
         if: success() || failure()    # run this step even if previous step failed
         with:
           name: test report           # Name of the check run which will be created
-          path: test-results.json    # Path to test results
+          path: reports/test-results.json  # Path to test results
           reporter: 'flutter-json'   
             
