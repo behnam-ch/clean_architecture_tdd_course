@@ -33,5 +33,5 @@ jobs:
         with:
           name: test report           # Name of the check run which will be created
           path: test-results.json    # Path to test results
-          reporter: flutter-json   
+          reporter: 'flutter-json'   
             
