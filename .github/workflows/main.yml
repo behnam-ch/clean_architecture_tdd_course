@@ -26,3 +26,7 @@ jobs:
   
       - name: Run octocov              
         uses: k1LoW/octocov-action@v0.51.6
+
+      - name: Test Reporter
+        uses: dorny/test-reporter@v1.6.0
+            
